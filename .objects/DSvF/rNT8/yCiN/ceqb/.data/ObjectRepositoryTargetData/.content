@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yCe2H9xClUiK5NwoP84mOw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 993, 519" DesignTimeScaleFactor="1" Guid="33f624e6-1d2a-4d9c-b7f5-bd12250e49c4" ScopeSelectorArgument="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='C:\Windows\System32\cmd.exe' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.FuzzySelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:Literal x:TypeArguments="x:String" Value="" />
+        </p:InArgument>
+      </TargetAnchorable.FuzzySelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="232dfcae84ac4f783e50b6ce85029991.png" xmlns="">0EYUFnPMiwUi2jVF5k__ilw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">KeyboardShortcut</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

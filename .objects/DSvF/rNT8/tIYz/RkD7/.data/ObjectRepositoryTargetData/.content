@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-yVfo2r9rk2PgXKCwQLhwQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="106c7def-a338-494b-8109-d210e4d181a3" CvElementArea="234, 139, 74, 22" CvTextArea="262, 145, 17, 11" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="234, 139, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="d300ea95-644d-46c1-ba63-d56dd1313600" ScopeSelectorArgument="&lt;wnd app='pinentry.exe' cls='Qt*QWindowIcon' title='pinentry-qt' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ad842cd2a9874ffde4fc9eb475641b03.png" xmlns="">0rHacjEMWFESHt6p45uGG7g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

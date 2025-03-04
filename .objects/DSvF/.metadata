@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Command Prompt",
+  "Type": "App",
+  "Id": "DSvFOz-mjEmYcEWrjShf8g",
+  "Reference": "RyMrKh5Q8EamrKumzQXPqQ/DSvFOz-mjEmYcEWrjShf8g",
+  "Created": "2025-02-17T07:00:30.3752501Z",
+  "Updated": "2025-02-17T07:00:30.3752501Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

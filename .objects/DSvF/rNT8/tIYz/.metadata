@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Command Prompt(1)",
+  "Type": "Screen",
+  "Id": "tIYzRxTZwke0_MbW04Nduw",
+  "Reference": "RyMrKh5Q8EamrKumzQXPqQ/tIYzRxTZwke0_MbW04Nduw",
+  "ParentRef": "RyMrKh5Q8EamrKumzQXPqQ/rNT8c_MD1EqYR7DJuMTnqw",
+  "Created": "2025-02-20T03:39:44.423059Z",
+  "Updated": "2025-02-20T03:39:44.423059Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

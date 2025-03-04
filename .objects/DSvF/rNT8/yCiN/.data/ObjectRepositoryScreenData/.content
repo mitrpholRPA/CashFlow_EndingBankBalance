@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="ye6dzdEPL0aWzsYxNRnWYA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="52, 52, 993, 519" FilePath="C:\Windows\System32\cmd.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVFhH7ZdLaxpRGIaHKBEJQUFxIQjeEEFFEEUUEURURNS/0X3IIlAC5qKdaLFSqylNfk+beF8lK7PLX7CrvD2fN2Z0EiQ4GqgvPDgevzPfM8NBzuF22Xr4Su1z4eILNslFsVxgrfcZe1yJL788Dp8xeHhiDNfKp5Oa5CdJsOaGsUS19mPU7Q8wpzdAR5I+Ot0+2nN6aHUm0DjN6/ZZDauj32n8vt3FXauDP/dt/L5rzZkK2BgHXPP6dpTP50Hkcjlks1lkMhmk02mkUikkEgnE43HEYjFEo1FEIhGEw2EEg0H4/X74fD54vV54PB64XC44nU44HA5YLBYYjUbodDqo1WpqOGcq4GAcMoGb7Qo0mr+2K1Bv/Py7KDDLawIU2QQoszdAmQlQZBGo1Zvj5lICb70BykzA7XbDbrfDarXCbDbDZDJBr9dDq9VCo9FApVKtRyAUCo2f1GazjesoSqVSdPNVWFmAQk3pySjCmxBSY6sgEvj2vSESEC5Cen3CiYtQhNdvRThPJMD+CUUCgUBgadGsG0mBZDIJg8GwVCwHSwK0uhdXqpyIBEr8VygUiqUiOREJTL9slJ3ATmAn8LEEaI9+Wrgc0eB7OC9eochXwFeqKF1VcVkq40yiTsjR8UmdNZ/silnogEB7dBogq01AvSbnApa96QXZHG4I6jU5Gf3n4bh/yEbmXwyqKk4AAAAASUVORK5CYII=" Selector="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='Command Prompt' /&gt;" Title="Command Prompt" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="d590d2d7941374d7ca9cc1f383ffe504.png" xmlns="">0axSvypnlY06RBtgpTRgMcw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

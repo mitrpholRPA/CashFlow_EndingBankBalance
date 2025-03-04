@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nvsJdTbIUU-2u_qmoWkUDw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 993, 519" DesignTimeScaleFactor="1" Guid="83871ff4-4b66-4384-8367-dee2d01dbe66" ScopeSelectorArgument="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='Command Prompt' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.FuzzySelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:Literal x:TypeArguments="x:String" Value="" />
+        </p:InArgument>
+      </TargetAnchorable.FuzzySelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="c19f53e4e1fba55a5f9ebd64f5bf4677.png" xmlns="">0k_3GfIqGcUaNFGhpHuZzhg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jrmaqZGoTUee5LQew2OWIg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="19, 139, 371, 23" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl role='grouping' automationid='' check:fulltext='OK&amp;#xD;&amp;#xA;Cancel' /&gt;" Guid="983f4434-e54f-4171-ac0a-65f6eb2b2283" ScopeSelectorArgument="&lt;wnd app='pinentry.exe' cls='Qt*QWindowIcon' title='pinentry-qt' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="812464811b00e45ba11c0d32b5c67f80.png" xmlns="">0SLW8EGOLTU6fTIKNpri3WQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
