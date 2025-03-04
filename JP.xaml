@@ -7,6 +7,7 @@
     <x:Property Name="strPathReport" Type="InArgument(x:String)" />
     <x:Property Name="strSheetName" Type="InArgument(x:String)" />
     <x:Property Name="strExcelRow" Type="InArgument(x:String)" />
+    <x:Property Name="dt_DateForSharepoint" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -473,16 +474,16 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>True</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID0" DisplayName="Get Data Statement" sap:VirtualizedContainerService.HintSize="695,2200" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+                    <State x:Name="__ReferenceID0" DisplayName="Get Data Statement" sap:VirtualizedContainerService.HintSize="695,2418" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
                       <State.Entry>
-                        <Sequence sap:VirtualizedContainerService.HintSize="649,2086" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                        <Sequence sap:VirtualizedContainerService.HintSize="649,2304" sap2010:WorkflowViewState.IdRef="Sequence_61">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:FileExistsX DisplayName="File Exists" Exists="[fileExists]" sap:VirtualizedContainerService.HintSize="615,165" sap2010:WorkflowViewState.IdRef="FileExistsX_7" Path="[strPathStatementOutput+strFileName]" />
-                          <If Condition="[fileExists]" sap:VirtualizedContainerService.HintSize="615,1861" sap2010:WorkflowViewState.IdRef="If_18">
+                          <If Condition="[fileExists]" sap:VirtualizedContainerService.HintSize="615,2079" sap2010:WorkflowViewState.IdRef="If_18">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -490,7 +491,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="581,1535" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="581,1753" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -517,7 +518,7 @@
                                     </scg:List>
                                   </ui:FilterDataTable.SelectColumns>
                                 </ui:FilterDataTable>
-                                <If Condition="[dt_Statement.RowCount &gt;0]" sap:VirtualizedContainerService.HintSize="547,923" sap2010:WorkflowViewState.IdRef="If_19">
+                                <If Condition="[dt_Statement.RowCount &gt;0]" sap:VirtualizedContainerService.HintSize="547,1141" sap2010:WorkflowViewState.IdRef="If_19">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -525,7 +526,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,597" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,815" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="s:DateTime" Name="dASoFDate" />
                                       </Sequence.Variables>
@@ -556,15 +557,15 @@
                                           </scg:List>
                                         </ui:MultipleAssign.AssignOperations>
                                       </ui:MultipleAssign>
-                                      <If Condition="[not dASoFDate.Equals(dDateForRun)]" sap:VirtualizedContainerService.HintSize="479,358" sap2010:WorkflowViewState.IdRef="If_20">
+                                      <If Condition="[not dASoFDate.Equals(dDateForRun)]" sap:VirtualizedContainerService.HintSize="479,576" sap2010:WorkflowViewState.IdRef="If_20">
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,326" sap2010:WorkflowViewState.IdRef="Sequence_67">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[strPathReport]">
+                                            <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[strPathReport]">
                                               <ui:ExcelApplicationScope.Body>
                                                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                   <ActivityAction.Argument>
@@ -596,6 +597,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:ExcelApplicationScope>
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{dASoFDate.ToString(&quot;dd&quot;)}]" DataTable="[dt_DateForSharepoint]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>

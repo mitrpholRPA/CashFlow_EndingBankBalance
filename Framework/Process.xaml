@@ -9,6 +9,7 @@
     <x:Property Name="strColumn" Type="InArgument(x:String)" />
     <x:Property Name="strPreColumn" Type="InArgument(x:String)" />
     <x:Property Name="strColumnCurrency" Type="InArgument(x:String)" />
+    <x:Property Name="dt_DateForSharepoint" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -175,7 +176,7 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <ui:ExcelApplicationScope DisplayName="Excel Application Scope" EditPassword="{x:Null}" ExistingWorkbook="{x:Null}" sap:VirtualizedContainerService.HintSize="802,2768" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Password="{x:Null}" SensitivityLabel="{x:Null}" SensitivityOperation="None" Workbook="{x:Null}" WorkbookPath="[strPathReport]">
+              <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="802,2768" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[strPathReport]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
@@ -187,7 +188,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InterruptibleWhile Condition="[index&lt; dt_TransactionData.RowCount]" CurrentIndex="[index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="734,2575" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="{x:Null}">
+                      <ui:InterruptibleWhile Condition="[index&lt; dt_TransactionData.RowCount]" CurrentIndex="[index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="734,2575" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                         <ui:InterruptibleWhile.Body>
                           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="700,2438" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <sap:WorkflowViewStateService.ViewState>
@@ -317,16 +318,7 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:ExcelReadRange AddHeaders="False" DataTable="[dt_Data]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[strSheetName]">
-                                    <ui:ExcelReadRange.Range>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <Literal x:TypeArguments="x:String">
-                                          <Literal.Result>
-                                            <OutArgument x:TypeArguments="x:String" />
-                                          </Literal.Result></Literal>
-                                      </InArgument>
-                                    </ui:ExcelReadRange.Range>
-                                  </ui:ExcelReadRange>
+                                  <ui:ExcelReadRange AddHeaders="False" DataTable="[dt_Data]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="[Nothing]" SheetName="[strSheetName]" />
                                   <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strExcelRow]</OutArgument>
@@ -371,7 +363,7 @@
                                     </ui:FilterDataTable.SelectColumns>
                                   </ui:FilterDataTable>
                                   <ui:ExcelWriteRange AddHeaders="False" DataTable="[dt_Temp]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[strSheetName]" StartingCell="[&quot;A&quot;+strExcelRow]" />
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="{x:Null}" Message="[&quot;Add Data [&quot;+strBankName+&quot;]    [&quot;+strBankAccount+&quot;]   Row [&quot;+strExcelRow+&quot;]&quot;]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Add Data [&quot;+strBankName+&quot;]    [&quot;+strBankAccount+&quot;]   Row [&quot;+strExcelRow+&quot;]&quot;]" />
                                 </Sequence>
                               </If.Else>
                             </If>
@@ -431,7 +423,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID1" DisplayName="SCB" sap:VirtualizedContainerService.HintSize="150,60" sap2010:WorkflowViewState.IdRef="State_2">
               <State.Entry>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SCB - Invoke Workflow File (SCB.xaml)" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="SCB.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SCB - Invoke Workflow File (SCB.xaml)" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="SCB.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -486,7 +478,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetValuePreDate - Invoke Workflow File (GetValuePreDate.xaml)" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="GetValuePreDate.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetValuePreDate - Invoke Workflow File (GetValuePreDate.xaml)" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="GetValuePreDate.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="strRow">[strExcelRow]</InArgument>
                                           <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
@@ -509,7 +501,7 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <ui:WriteCell Cell="[strColumn+strExcelRow]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_1" Password="{x:Null}" SheetName="[strSheetName]" Text="[strAmount]" WorkbookPath="[strPathReport]" WorkbookPathResource="{x:Null}">
+                                <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[strColumn+strExcelRow]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="[strSheetName]" Text="[strAmount]" WorkbookPath="[strPathReport]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -567,7 +559,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID2" DisplayName="KBANK" sap:VirtualizedContainerService.HintSize="150,60" sap2010:WorkflowViewState.IdRef="State_4">
               <State.Entry>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KBANK - Invoke Workflow File (KBANK.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="KBANK.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KBANK - Invoke Workflow File (KBANK.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="KBANK.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -614,7 +606,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID3" DisplayName="BBL" sap:VirtualizedContainerService.HintSize="150,60" sap2010:WorkflowViewState.IdRef="State_6">
               <State.Entry>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BBL - Invoke Workflow File (BBL.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="BBL.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BBL - Invoke Workflow File (BBL.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="BBL.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -661,7 +653,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID4" DisplayName="TTB" sap:VirtualizedContainerService.HintSize="150,60" sap2010:WorkflowViewState.IdRef="State_7">
               <State.Entry>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TTB - Invoke Workflow File (TTB.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="TTB.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TTB - Invoke Workflow File (TTB.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="TTB.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -709,7 +701,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID5" DisplayName="JP" sap:VirtualizedContainerService.HintSize="380,506" sap2010:WorkflowViewState.IdRef="State_8">
               <State.Entry>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="JP - Invoke Workflow File (JP.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="JP.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="JP - Invoke Workflow File (JP.xaml)" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="JP.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -718,6 +710,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="strPathReport">[strPathReport]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strSheetName">[strSheetName]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strExcelRow">[strExcelRow]</InArgument>
+                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_DateForSharepoint">[dt_DateForSharepoint]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </State.Entry>
@@ -759,7 +752,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID6" DisplayName="KTB" sap:VirtualizedContainerService.HintSize="150,60" sap2010:WorkflowViewState.IdRef="State_9">
               <State.Entry>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KTB - Invoke Workflow File (KTB.xaml)" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="KTB.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KTB - Invoke Workflow File (KTB.xaml)" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="KTB.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -853,7 +846,7 @@
             <x:Reference>__ReferenceID0</x:Reference>
           </Transition.To>
           <Transition.Action>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="{x:Null}" Message="[SystemExeption.Message]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[SystemExeption.Message]" />
           </Transition.Action>
           <Transition.Condition>[SystemExeption IsNot Nothing]</Transition.Condition>
         </Transition>
