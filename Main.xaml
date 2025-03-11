@@ -1055,9 +1055,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="638,1166" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="670,2350" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="592,1021" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="624,2205" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1065,14 +1065,14 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="554,793" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="586,1977" sap2010:WorkflowViewState.IdRef="Sequence_54">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CopyDataNewSheet - Invoke Workflow File (CopyDataNewSheet.xaml)" sap:VirtualizedContainerService.HintSize="520,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="CopyDataNewSheet.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CopyDataNewSheet - Invoke Workflow File (CopyDataNewSheet.xaml)" sap:VirtualizedContainerService.HintSize="552,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="CopyDataNewSheet.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
@@ -1080,20 +1080,20 @@
                                           <InArgument x:TypeArguments="x:String" x:Key="strColumn">[strColumn]</InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <ui:RemoveDuplicateRows DataTable="[dt_DateForSharepoint]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="520,112" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dt_DateForSharepoint]" />
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DateForSharepoint]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="520,57" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                      <ui:RemoveDuplicateRows DataTable="[dt_DateForSharepoint]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="552,112" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dt_DateForSharepoint]" />
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DateForSharepoint]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,1241" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                         <ui:ForEachRow.Body>
                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,1045" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="s:DateTime" Name="dDateForFile" />
                                               </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
@@ -1168,88 +1168,71 @@
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:ExcelApplicationScope>
                                               </Sequence>
-                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                                <ui:CommentOut.Body>
-                                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_77">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <Sequence DisplayName="Upload File Share Drive" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_75">
-                                                      <Sequence.Variables>
-                                                        <Variable x:TypeArguments="x:String" Name="strAppID" />
-                                                        <Variable x:TypeArguments="x:String" Name="strTenant" />
-                                                      </Sequence.Variables>
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SharePoint_AppID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Share" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-                                                        <ui:GetRobotAsset.Value>
-                                                          <OutArgument x:TypeArguments="x:String">[strAppID]</OutArgument>
-                                                        </ui:GetRobotAsset.Value>
-                                                      </ui:GetRobotAsset>
-                                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SharePoint_Tenant" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Share" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
-                                                        <ui:GetRobotAsset.Value>
-                                                          <OutArgument x:TypeArguments="x:String">[strTenant]</OutArgument>
-                                                        </ui:GetRobotAsset.Value>
-                                                      </ui:GetRobotAsset>
-                                                      <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="RPARobot@mitrphol.com" ApplicationId="[strAppID]" AuthenticationType="InteractiveToken" ConfigLocation="PropertiesPanel" DisplayName="Microsoft 365 Scope" EmailAddress="RPARobot@mitrphol.com" Environment="Global" sap:VirtualizedContainerService.HintSize="450,802" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_2" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" TenantId="[strTenant]" UseConnectionService="False">
-                                                        <uma:Office365ApplicationScope.AuthenticationScopes>
-                                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                                        </uma:Office365ApplicationScope.AuthenticationScopes>
-                                                        <uma:Office365ApplicationScope.Body>
-                                                          <ActivityAction x:TypeArguments="x:Object">
-                                                            <ActivityAction.Argument>
-                                                              <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
-                                                            </ActivityAction.Argument>
-                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,561" sap2010:WorkflowViewState.IdRef="Sequence_59">
-                                                              <Sequence.Variables>
-                                                                <Variable x:TypeArguments="mg:DriveItem" Name="driveFolder" />
-                                                              </Sequence.Variables>
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                              <umaf:FindFilesAndFolders ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" Results="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files And Folders" DriveName="Documents" First="[driveFolder]" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="Ending Balance" SiteUrl="https://mitrphol.sharepoint.com/sites/CashFlow" Subfolder="ProcessRPA" />
-                                                              <umaf:UploadFile CloudFileName="{x:Null}" ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" Metadata="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" Checkin="False" ConflictBehavior="Replace" Destination="[driveFolder]" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="382,281" sap2010:WorkflowViewState.IdRef="UploadFile_1" LocalFilePath="[strPathFileShareDrive]" />
-                                                              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382,103" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[strPathFileShareDrive]" />
-                                                            </Sequence>
-                                                          </ActivityAction>
-                                                        </uma:Office365ApplicationScope.Body>
-                                                        <uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
-                                                          <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
-                                                            <usau:BackupSlot.BackupValues>
-                                                              <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
-                                                            </usau:BackupSlot.BackupValues>
-                                                          </usau:BackupSlot>
-                                                        </uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
-                                                      </uma:Office365ApplicationScope>
-                                                    </Sequence>
-                                                  </Sequence>
-                                                </ui:CommentOut.Body>
+                                              <Sequence DisplayName="Upload File Share Drive" sap:VirtualizedContainerService.HintSize="484,48" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="x:String" Name="strAppID" />
+                                                  <Variable x:TypeArguments="x:String" Name="strTenant" />
+                                                </Sequence.Variables>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                              </ui:CommentOut>
+                                                <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SharePoint_AppID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Share" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+                                                  <ui:GetRobotAsset.Value>
+                                                    <OutArgument x:TypeArguments="x:String">[strAppID]</OutArgument>
+                                                  </ui:GetRobotAsset.Value>
+                                                </ui:GetRobotAsset>
+                                                <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SharePoint_Tenant" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Share" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+                                                  <ui:GetRobotAsset.Value>
+                                                    <OutArgument x:TypeArguments="x:String">[strTenant]</OutArgument>
+                                                  </ui:GetRobotAsset.Value>
+                                                </ui:GetRobotAsset>
+                                                <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="RPARobot@mitrphol.com" ApplicationId="[strAppID]" AuthenticationType="InteractiveToken" ConfigLocation="PropertiesPanel" DisplayName="Microsoft 365 Scope" EmailAddress="RPARobot@mitrphol.com" Environment="Global" sap:VirtualizedContainerService.HintSize="450,802" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_2" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" TenantId="[strTenant]" UseConnectionService="False">
+                                                  <uma:Office365ApplicationScope.AuthenticationScopes>
+                                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                  </uma:Office365ApplicationScope.AuthenticationScopes>
+                                                  <uma:Office365ApplicationScope.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,561" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="mg:DriveItem" Name="driveFolder" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <umaf:FindFilesAndFolders ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" Results="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files And Folders" DriveName="Documents" First="[driveFolder]" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="Ending Balance" SiteUrl="https://mitrphol.sharepoint.com/sites/CashFlow" Subfolder="ProcessRPA" />
+                                                        <umaf:UploadFile CloudFileName="{x:Null}" ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" Metadata="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" Checkin="False" ConflictBehavior="Replace" Destination="[driveFolder]" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="382,281" sap2010:WorkflowViewState.IdRef="UploadFile_1" LocalFilePath="[strPathFileShareDrive]" />
+                                                        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382,103" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[strPathFileShareDrive]" />
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </uma:Office365ApplicationScope.Body>
+                                                  <uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
+                                                    <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
+                                                      <usau:BackupSlot.BackupValues>
+                                                        <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                                                      </usau:BackupSlot.BackupValues>
+                                                    </usau:BackupSlot>
+                                                  </uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
+                                                </uma:Office365ApplicationScope>
+                                              </Sequence>
                                             </Sequence>
                                           </ActivityAction>
                                         </ui:ForEachRow.Body>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:ForEachRow>
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,219" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="552,219" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                         <ui:CommentOut.Body>
                                           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_79">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -1283,7 +1266,7 @@
                                           </Sequence>
                                         </ui:CommentOut.Body>
                                       </ui:CommentOut>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="520,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="552,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1291,7 +1274,7 @@
                                     </Sequence>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="558,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="590,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
