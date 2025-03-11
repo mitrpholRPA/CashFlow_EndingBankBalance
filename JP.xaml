@@ -142,7 +142,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="JP" sap:VirtualizedContainerService.HintSize="867,691.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="JP" sap:VirtualizedContainerService.HintSize="985,691.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -474,16 +474,16 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>True</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID0" DisplayName="Get Data Statement" sap:VirtualizedContainerService.HintSize="695,2418" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+                    <State x:Name="__ReferenceID0" DisplayName="Get Data Statement" sap:VirtualizedContainerService.HintSize="786,3195" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
                       <State.Entry>
-                        <Sequence sap:VirtualizedContainerService.HintSize="649,2304" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                        <Sequence sap:VirtualizedContainerService.HintSize="740,3081" sap2010:WorkflowViewState.IdRef="Sequence_61">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:FileExistsX DisplayName="File Exists" Exists="[fileExists]" sap:VirtualizedContainerService.HintSize="615,165" sap2010:WorkflowViewState.IdRef="FileExistsX_7" Path="[strPathStatementOutput+strFileName]" />
-                          <If Condition="[fileExists]" sap:VirtualizedContainerService.HintSize="615,2079" sap2010:WorkflowViewState.IdRef="If_18">
+                          <ui:FileExistsX DisplayName="File Exists" Exists="[fileExists]" sap:VirtualizedContainerService.HintSize="706,165" sap2010:WorkflowViewState.IdRef="FileExistsX_7" Path="[strPathStatementOutput+strFileName]" />
+                          <If Condition="[fileExists]" sap:VirtualizedContainerService.HintSize="706,2856" sap2010:WorkflowViewState.IdRef="If_18">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -491,15 +491,15 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="581,1753" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="672,2530" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="547,173" sap2010:WorkflowViewState.IdRef="LogMessage_17" Message="[&quot;Find &quot;+strPathStatementOutput+strFileName]" />
-                                <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dt_Statement]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="[strPathStatementOutput+strFileName]" sap:VirtualizedContainerService.HintSize="547,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_7" />
-                                <ui:FilterDataTable DataTable="[dt_Statement]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="547,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dt_Statement]" SelectColumnsMode="Remove">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="638,173" sap2010:WorkflowViewState.IdRef="LogMessage_17" Message="[&quot;Find &quot;+strPathStatementOutput+strFileName]" />
+                                <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dt_Statement]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="[strPathStatementOutput+strFileName]" sap:VirtualizedContainerService.HintSize="638,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_7" />
+                                <ui:FilterDataTable DataTable="[dt_Statement]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="638,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dt_Statement]" SelectColumnsMode="Remove">
                                   <ui:FilterDataTable.Filters>
                                     <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                       <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -518,7 +518,7 @@
                                     </scg:List>
                                   </ui:FilterDataTable.SelectColumns>
                                 </ui:FilterDataTable>
-                                <If Condition="[dt_Statement.RowCount &gt;0]" sap:VirtualizedContainerService.HintSize="547,1141" sap2010:WorkflowViewState.IdRef="If_19">
+                                <If Condition="[dt_Statement.RowCount &gt;0]" sap:VirtualizedContainerService.HintSize="638,1918" sap2010:WorkflowViewState.IdRef="If_19">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -526,7 +526,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,815" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="604,1592" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="s:DateTime" Name="dASoFDate" />
                                       </Sequence.Variables>
@@ -535,7 +535,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
+                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="570,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
                                         <ui:MultipleAssign.AssignOperations>
                                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
@@ -557,27 +557,38 @@
                                           </scg:List>
                                         </ui:MultipleAssign.AssignOperations>
                                       </ui:MultipleAssign>
-                                      <If Condition="[not dASoFDate.Equals(dDateForRun)]" sap:VirtualizedContainerService.HintSize="479,576" sap2010:WorkflowViewState.IdRef="If_20">
+                                      <If Condition="[not dASoFDate.Equals(dDateForRun)]" sap:VirtualizedContainerService.HintSize="570,1353" sap2010:WorkflowViewState.IdRef="If_20">
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,326" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,1103" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="strPathFile" />
+                                            </Sequence.Variables>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[strPathReport]">
+                                            <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[strPathFile]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[in_Config("Path Report").ToString+in_Config("Report File Nane").ToString.Replace("[Year]",dASoFDate.ToString("yyyy"))]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="502,720" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[strPathFile]">
                                               <ui:ExcelApplicationScope.Body>
                                                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,405" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,578" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:ExcelLookUpRange Range="{x:Null}" DisplayName="Lookup Range" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelLookUpRange_6" Result="[strColumn]" SheetName="[strSheetName]" Value="[dASoFDate.ToString(&quot;dd&quot;)]" />
+                                                    <ui:ExcelLookUpRange Range="{x:Null}" DisplayName="Lookup Range" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelLookUpRange_6" Result="[strColumn]" SheetName="[dASoFDate.ToString(&quot;MM.yyyy&quot;)]" Value="[dASoFDate.ToString(&quot;dd&quot;)]" />
                                                     <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_25">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:String">[strColumn]</OutArgument>
@@ -586,18 +597,19 @@
                                                         <InArgument x:TypeArguments="x:String">[if(strColumn.Length &gt; 2, strColumn.Substring(0,2), strColumn.Substring(0,1))]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <ui:ExcelWriteCell Cell="[strColumn+strExcelRow]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,111" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="[strSheetName]" Text="[strAmount]" />
+                                                    <ui:ExcelWriteCell Cell="[strColumn+strExcelRow]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="[dASoFDate.ToString(&quot;MM.yyyy&quot;)]" Text="[strAmount]" />
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_18" Message="[&quot;AS OF Date [&quot;+dASoFDate.ToString(&quot;dd.MM.yyyy&quot;)+&quot;] Write File [&quot;+strPathFile+&quot;] Column &quot;+strColumn+strExcelRow+&quot;    &quot;+dASoFDate.ToString(&quot;MM.yyyy&quot;)]" />
                                                   </Sequence>
                                                 </ActivityAction>
                                               </ui:ExcelApplicationScope.Body>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:ExcelApplicationScope>
-                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{dASoFDate.ToString(&quot;dd&quot;)}]" DataTable="[dt_DateForSharepoint]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{dASoFDate.ToString(&quot;ddMMyyyy&quot;), strPathFile, dASoFDate.ToString(&quot;MM.yyyy&quot;)}]" DataTable="[dt_DateForSharepoint]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="502,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
