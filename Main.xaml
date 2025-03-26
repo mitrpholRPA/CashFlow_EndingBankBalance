@@ -76,6 +76,7 @@
       <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -1055,9 +1056,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="670,2746" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="795,3996" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="624,2601" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="749,3531" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1065,14 +1066,14 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="586,2373" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="711,2983" sap2010:WorkflowViewState.IdRef="Sequence_54">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CopyDataNewSheet - Invoke Workflow File (CopyDataNewSheet.xaml)" sap:VirtualizedContainerService.HintSize="552,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="CopyDataNewSheet.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CopyDataNewSheet - Invoke Workflow File (CopyDataNewSheet.xaml)" sap:VirtualizedContainerService.HintSize="677,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="CopyDataNewSheet.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="s:DateTime" x:Key="dDateForRun">[dDateForRun]</InArgument>
                                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
@@ -1080,14 +1081,14 @@
                                           <InArgument x:TypeArguments="x:String" x:Key="strColumn">[strColumn]</InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <ui:RemoveDuplicateRows DataTable="[dt_DateForSharepoint]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="552,112" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dt_DateForSharepoint]" />
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DateForSharepoint]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,1241" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                      <ui:RemoveDuplicateRows DataTable="[dt_DateForSharepoint]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="677,112" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dt_DateForSharepoint]" />
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DateForSharepoint]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="677,1851" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                         <ui:ForEachRow.Body>
                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,1045" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="643,1655" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="s:DateTime" Name="dDateForFile" />
                                               </Sequence.Variables>
@@ -1097,14 +1098,14 @@
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Copy Data To ShareDrive" sap:VirtualizedContainerService.HintSize="484,937" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                              <Sequence DisplayName="Copy Data To ShareDrive" sap:VirtualizedContainerService.HintSize="609,1547" sap2010:WorkflowViewState.IdRef="Sequence_73">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                                <Assign sap:VirtualizedContainerService.HintSize="575,114" sap2010:WorkflowViewState.IdRef="Assign_36">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="s:DateTime">[dDateForFile]</OutArgument>
                                                   </Assign.To>
@@ -1112,8 +1113,8 @@
                                                     <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(CurrentRow.Item("Date").ToString,"ddMMyyyy",System.Globalization.CultureInfo.InvariantCulture,System.Globalization.DateTimeStyles.None)]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_DataShareDrive]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="450,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="[CurrentRow.Item(&quot;SheetName&quot;).ToString]" WorkbookPath="[CurrentRow.Item(&quot;PathFile&quot;).ToString]" />
-                                                <ui:FilterDataTable DataTable="[dt_DataShareDrive]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="450,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_DataShareDrive]" SelectColumnsMode="Keep">
+                                                <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_DataShareDrive]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="575,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" PreserveFormat="True" SheetName="[CurrentRow.Item(&quot;SheetName&quot;).ToString]" WorkbookPath="[CurrentRow.Item(&quot;PathFile&quot;).ToString]" />
+                                                <ui:FilterDataTable DataTable="[dt_DataShareDrive]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="575,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_DataShareDrive]" SelectColumnsMode="Keep">
                                                   <ui:FilterDataTable.Filters>
                                                     <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                                       <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -1136,7 +1137,7 @@
                                                     </scg:List>
                                                   </ui:FilterDataTable.SelectColumns>
                                                 </ui:FilterDataTable>
-                                                <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                                <Assign sap:VirtualizedContainerService.HintSize="575,114" sap2010:WorkflowViewState.IdRef="Assign_31">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:String">[strPathFileShareDrive]</OutArgument>
                                                   </Assign.To>
@@ -1144,31 +1145,52 @@
                                                     <InArgument x:TypeArguments="x:String">[Config("Path Report").ToString+"EndingBalance."+dDateForFile.ToString("yyyyMM")+date.Now.ToString(".HHmmss")+".xlsx"]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="450,304" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[strPathFileShareDrive]">
-                                                  <ui:ExcelApplicationScope.Body>
-                                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                                <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="575,914" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                                                  <ueab:ExcelProcessScopeX.Body>
+                                                    <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                                       <ActivityAction.Argument>
-                                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                                        <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541,804" sap2010:WorkflowViewState.IdRef="Sequence_82">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:ExcelWriteRange AddHeaders="True" DataTable="[dt_DataShareDrive]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,111" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Sheet1" StartingCell="A1" />
+                                                        <ueab:ExcelApplicationCard Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,744" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ReadFormatting="RawValue" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[strPathFileShareDrive]">
+                                                          <ueab:ExcelApplicationCard.Body>
+                                                            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                              <ActivityAction.Argument>
+                                                                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                                              </ActivityAction.Argument>
+                                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473,412" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,170" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;E1:E&quot;+dt_DataShareDrive.RowCount.ToString)]">
+                                                                  <ueab:FormatRangeX.Alignment>
+                                                                    <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                                                                  </ueab:FormatRangeX.Alignment>
+                                                                  <ueab:FormatRangeX.Font>
+                                                                    <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                                                                  </ueab:FormatRangeX.Font>
+                                                                  <ueab:FormatRangeX.Format>
+                                                                    <ueab:TextFormat />
+                                                                  </ueab:FormatRangeX.Format>
+                                                                </ueab:FormatRangeX>
+                                                                <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="439,182" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_DataShareDrive]" />
+                                                              </Sequence>
+                                                            </ActivityAction>
+                                                          </ueab:ExcelApplicationCard.Body>
+                                                        </ueab:ExcelApplicationCard>
                                                       </Sequence>
                                                     </ActivityAction>
-                                                  </ui:ExcelApplicationScope.Body>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </ui:ExcelApplicationScope>
+                                                  </ueab:ExcelProcessScopeX.Body>
+                                                </ueab:ExcelProcessScopeX>
                                               </Sequence>
-                                              <Sequence DisplayName="Upload File Share Drive" sap:VirtualizedContainerService.HintSize="484,48" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                              <Sequence DisplayName="Upload File Share Drive" sap:VirtualizedContainerService.HintSize="609,48" sap2010:WorkflowViewState.IdRef="Sequence_80">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="x:String" Name="strAppID" />
                                                   <Variable x:TypeArguments="x:String" Name="strTenant" />
@@ -1232,7 +1254,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:ForEachRow>
-                                      <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="552,615" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                      <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="677,615" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Name="strEmailSMTP" />
                                           <Variable x:TypeArguments="ss:SecureString" Name="PasswordSMTP" />
